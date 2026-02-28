@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Welcome Page (JavaScript Event Handling)</title>
+
+  <style> 
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      text-align: center;
+      background-color: rgb(255, 255, 255);
+    }
+
+    #welcomeMessage {
+      color: #000000;
+    }
+
+    #welcomeBtn {
+      padding: 10px 20px;
+      cursor: pointer;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="welcomeMessage">Welcome to My Page!</h1>
+  <button id="welcomeBtn">Click Me!</button>
+
+  <script>
+    const welcomeBtn = document.getElementById("welcomeBtn");
+    const welcomeMessage = document.getElementById("welcomeMessage");
+
+    // welcomeBtn.onclick = function() {
+    //   let text = document.getElementById("welcomeMessage");
+    //   text.style.display = text.style.display === "none" ? "block" : "none"; 
+    // };
+
+    welcomeBtn.onclick = function() {
+      welcomeMessage.textContent = "Have a great day!";
+      document.body.style.backgroundColor = "#eecc43"; 
+    };
+  </script>
+</body>
+</html>

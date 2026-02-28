@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Task 2: HTML Table with colspan and rowspan</title>
+
+<style>
+    body{
+        font-family: Arial, sans-serif;
+        background-color: #dadada;
+        text-align: center;
+        padding: 30px;
+        margin: auto;
+        border: 2px solid #dadada;  
+    }
+
+    .container{
+        background-color: #dadada;
+        padding: 5px;
+        /* border: 2px solid #b9b9b9; */
+        max-width: 50000px;
+        margin: auto;
+    }
+
+    h2{
+        margin-bottom: 15px;
+    }
+
+    table{
+        width: 95%;
+        margin: auto;
+        border-collapse: collapse;
+        background-color: #ffffff;
+    }
+
+    th{
+        background-color: #000000;
+        color: rgb(255, 255, 255);
+        padding: 10px;
+        border: 1px solid #b9b9b9;
+    }
+
+    td{
+        padding: 10px;
+        border: 1px solid #b9b9b9;
+    }
+
+    tr:nth-child(even){
+        background-color: #ffffff;
+    }
+</style>
+</head>
+
+<body>
+<div class = "container">
+
+<h2>Top 10 Horror Movies in the Philippines</h2>
+
+<table>
+<thead>
+    <tr>
+        <th>Number</th>
+        <th>Movie Name</th>
+        <th>Casts</th>
+        <th>Year Released</th>
+        <th>Director</th>
+        <th>Box Office (PHP)</th>
+        <th>Awards</th>
+    </tr>
+</thead>
+
+<tbody>
+    <tr>
+        <td>1</td>
+        <td rowspan="2">Feng Shui</td>
+        <td rowspan="2">Kris Aquino, Jay Manalo, Lotlot de Leon</td>
+        <td>2004</td>
+        <td>Chito S. Roño</td>
+        <td>180 million</td>
+        <td>FAMAS Award for Best Actress</td>
+    </tr>
+
+    <tr>
+        <td>2</td>
+        <td>2006</td>
+        <td>Chito S. Roño</td>
+        <td>160 million</td>
+        <td>Box Office Hit</td>
+    </tr>
+
+    <tr>
+        <td>3</td>
+        <td>The Road</td>
+        <td>Carmina Villarroel, Marvin Agustin, Rhian Ramos</td>
+        <td>2011</td>
+        <td>Yam Laranas</td>
+        <td>120 million</td>
+        <td rowspan="2">FAMAS Award for Best Picture</td>
+    </tr>
+
+    <tr>
+        <td>4</td>
+        <td>Sigaw</td>
+        <td>Richard Gutierrez, Angel Locsin, Iza Calzado</td>
+        <td>2004</td>
+        <td>Yam Laranas</td>
+        <td>100 million</td>
+        
+    </tr>
+
+    <tr>
+        <td>5</td>
+        <td>Pis-Siyam</td>
+        <td>Jodi Sta. Maria, Coco Martin, Gloria Sevilla</td>
+        <td>2004</td>
+        <td>Erik Matti</td>
+        <td>90 million</td>
+        <td>Cult Classic</td>
+    </tr>
+
+    <tr>
+        <td>6</td>
+        <td rowspan="3">Shake, Rattle & Roll (Series)</td>
+        <td rowspan="3">Various (e.g., Herbert Bautista, Manilyn Reynes)</td>
+        <td>1984-2014</td>
+        <td colspan="2">Various Directors</td>
+        <td>Longest-running horror series</td>
+    </tr>
+
+    <tr>
+        <td>7</td>
+        <td>2005</td>
+        <td>Topel Lee</td>
+        <td>80 million</td>
+        <td>Box Office Success</td>
+    </tr>
+
+    <tr>
+        <td>8</td>
+        <td>2005</td>
+        <td>Richard Somes</td>
+        <td>75 million</td>
+        <td>Critical Acclaim</td>
+    </tr>
+
+    <tr>
+        <td>9</td>
+        <td>Pasiyam</td>
+        <td>Jodi Sta. Maria, Coco Martin, Gloria Sevilla</td>
+        <td>2004</td>
+        <td>Erik Matti</td>
+        <td>70 million</td>
+        <td>Cult Following</td>
+    </tr>
+
+
+</tbody>
+<tfoot>
+    <tr>
+        <td>10</td>
+        <td>Kulam</td>
+        <td>Judy Ann Santos, Dennis Trillo, Rufa Mae Quinto</td>
+        <td>2008</td>
+        <td>Topel Lee</td>
+        <td>65 million</td>
+        <td>Box Office Hit</td>
+    </tr>
+</tfoot>
+
+
+
+
+</table>
+</div>  
+</body>
+</html>

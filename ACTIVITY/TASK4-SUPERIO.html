@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 4: ATM Withdrawal Function (JavaScript Functions & User Input)</title>
+</head>
+<body>
+  <script>
+    let currentBalance = parseFloat(prompt("Enter current balance:"));
+    let withdrawalAmount = parseFloat(prompt("Enter withdrawal amount:"));
+
+    function withdrawCash(balance, amount) {
+      alert('withdrawCash function called with balance: ' + balance + ' and amount: ' + amount);
+      if (amount > balance) {
+        alert("Insufficient funds.");
+      } else {
+        alert("Withdrawal successful. Remaining balance: " + (balance - amount) + " PHP"  );
+      }
+    }
+
+    withdrawCash(currentBalance, withdrawalAmount);
+  </script>
+</body>
+</html>

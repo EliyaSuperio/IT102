@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 3: Budget Decision Simulation (JavaScript Logic)</title>
+
+  <style>
+
+  </style>
+</head>
+<body>
+  <script>
+    let budget = prompt("Enter the budget amount in PHP:");
+    budget = parseFloat(budget);
+    alert("Your budget is: " + budget + " PHP");
+
+    // let treat = budget >= 10000 ? "Starbucks" :
+    //             budget >= 5000 && budget <=9999 ? "Shawarma" :
+    //             budget >= 1000 && budget <= 4999 ? "Milk Tea" : "No treat";
+
+    let treat;
+    if (budget >= 10000) {
+      treat = "Starbucks";
+      alert("Starbucks");
+    } else if (budget >= 5000 && budget <=9999) {
+      treat = "Shawarma";
+      alert("Shawarma");
+    } else if (budget >= 1000 && budget <= 4999) {
+      treat = "Milk Tea";
+      alert("Milk Tea");
+    } else {
+      treat = "No treat";
+      alert("No treat");
+    }
+
+
+   
+    console.log("Budget entered: " + budget + " PHP  fhgfghfh" + "You bought: " + treat);
+
+    
+    
+  </script>
+</body>
+</html>
