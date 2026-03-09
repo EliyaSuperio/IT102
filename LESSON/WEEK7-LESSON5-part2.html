@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{ /* tag name*/
+
+        }
+
+        #body{ /* id */
+
+        }
+
+        .body{ /* class */
+
+        }
+
+    </style>
+
+</head>
+<body>
+    <button id="btn_solo"> SOLO </button>
+
+    <button class="btn_class" id="btn_class1">btn cls 1</button>
+    <button class="btn_class" id="btn_class2">btn cls 2</button>
+    <button class="btn_class" id="btn_class3">btn cls 3</button>
+    
+    <hr>
+
+    <input type="radio" class="radio_input" id="yes" value="yes">
+    <input type="radio" class="radio_input" id="no" value="no">
+
+    <hr>
+
+    <section>section 1</section>
+    <section>section 2</section>
+    <section>section 3</section>
+    <section>section 4</section>
+    <section>section 5</section>
+
+    <hr>
+
+</body>
+<script>
+
+    let btn_class_qry = document.querySelectorAll(".btn_class");
+    console.log("class_qry: ", btn_class_qry);    
+
+    let radio_qry = document.querySelector(".radio_input");
+    console.log("radio_qry: ", radio_qry);
+    
+    let body_tag = document.getElementsByTagName("body");
+    console.log("body tag: ", body_tag );
+
+    let section_qry = document.querySelector("section");
+    console.log("section_qry: ", section_qry)
+    
+    let hr_tag = document.getElementsByTagName("hr");
+    console.log("Number of HR: ", hr_tag.length);
+
+    let radio_input = document.getElementsByClassName("radio_input");
+    console.log("radio_input: ", radio_input);
+  
+    let btn_class = document.getElementsByClassName("btn_class");
+    console.log("btn_class: ", btn_class);
+
+    let btn_solo = document.getElementById("btn_solo");
+    console.log("btn_solo: ", btn_solo);
+
+
+
+
+
+</script>
+</html>

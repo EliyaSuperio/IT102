@@ -1,0 +1,51 @@
+<!-- iNTRODUCTION TO THE DOM and Selecting HTML Elements -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>WEEK 7 - LESSON 5</title>
+
+
+  <style>
+ 
+  </style>
+
+</head>
+  <body>
+    <button id="btn_title">Change</button>
+
+    <div></div>
+  
+  <script>
+    let btn_title = document.getElementById("btn_title");
+    btn_title.addEventListener("click",function(){
+      document.querySelector("div").innerHTML = "<h1>HI</h1>"
+
+
+
+      // document.title = "🔴(1) Message from BSIT 2A"
+      // btn_title.innerHTML = "Reset";
+      // document.body.style.backgroundColor = "pink";
+    });
+    
+    btn_title = document.getElementById("btn_title");
+    btn_title.addEventListener("dblclick",function(){ 
+      document.querySelector("div").textContent = "<h1> HI</h1>"
+
+      // document.title = "WEEK 7 - LESSON 5"
+      // btn_title.innerHTML = "Change";
+      // document.body.style.backgroundColor = "white";
+    });
+
+
+
+    // console.log("Original Title",document.title);
+    // document.title = "New Title from BSIT2A";
+
+    // console.log("New Title: ",document.title);
+  </script>
+  </body>
+</html>
