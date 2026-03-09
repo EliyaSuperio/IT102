@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Student Registration</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            body {
+                font-family: Arial, sans-serif;
+                background: #f5f5f5;
+                color: #333;
+                line-height: 1.6;
+            }
+            .container {
+                width: 90%;
+                max-width: 1000px;
+                margin: 20px auto;
+                background: white;
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+            header {
+                text-align: center;
+                padding: 15px;
+                background: #007BFF;
+                color: white;
+                border-radius: 5px;
+            }
+            h1 {
+                margin-bottom: 10px;
+            }
+            .main-content {
+                margin-top: 20px;
+                padding: 15px;
+            }
+            form {
+                background: #e3f2fd;
+                padding: 15px;
+                border-radius: 5px;
+            }
+            label {
+                font-weight: bold;
+                display: block;
+                margin-top: 10px;
+            }
+            input, select {
+                width: 100%;
+                padding: 8px;
+                margin: 5px 0;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+            .btn {
+                background: #007BFF;
+                color: white;
+                padding: 10px 15px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                margin-top: 10px;
+                transition: 0.3s;
+            }
+            .btn:hover {
+                background: #0056b3;
+            }
+            .footer {
+                background: #222;
+                color: white;
+                text-align: center;
+                padding: 15px;
+                border-radius: 5px;
+                margin-top: 20px;
+            }
+            .questions {
+                background: #fff;
+                padding: 15px;
+                margin-top: 20px;
+                border-radius: 5px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+            .question {
+                font-weight: bold;
+                color: #d32f2f;
+                margin: 10px 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <h1 id="page-title">Student Registration</h1>
+                <p class="description">Fill out the form below to register.</p>
+            </header>
+
+            <section class="main-content">
+                <h2>Registration Form</h2>
+                <form id="register-form">
+                    <label for="first-name">First Name:</label>
+                    <input type="text" id="first-name" class="input-field name" name="fname">
+
+                    <label for="last-name">Last Name:</label>
+                    <input type="text" id="last-name" class="input-field name" name="lname">
+
+                    <label>Gender:</label>
+                    <input type="radio" name="gender" value="Male" class="gender"> Male
+                    <input type="radio" name="gender" value="Female" class="gender"> Female
+
+                    <label>Course:</label>
+                    <select id="course-select">
+                        <option value="CS">Computer Science</option>
+                        <option value="IT">Information Technology</option>
+                        <option value="SE">Software Engineering</option>
+                    </select>
+
+                    <label>Interests:</label>
+                    <input type="checkbox" class="interest" value="Programming"> Programming
+                    <input type="checkbox" class="interest" value="Networking"> Networking
+                    <input type="checkbox" class="interest" value="AI"> Artificial Intelligence
+
+                    <button type="button" class="btn submit-btn">Register</button>
+                    <button type="reset" class="btn reset-btn">Reset</button>
+                </form>
+            </section>
+
+            <footer class="footer">
+                <p>Contact support at <span id="contact-email">support@school.com</span></p>
+                <button class="btn contact-btn">Contact Us</button>
+            </footer>
+        </div>
+
+        <div class="questions">
+            <h2>DOM Selection Questions</h2>
+            <p class="question"> What element is selected using `document.getElementById("page-title")`?</p>
+            <p class="question"> How many elements are selected using `document.getElementsByClassName("name")`?</p>
+            <p class="question"> What is the first input field selected using `document.querySelector("input")`?</p>
+            <p class="question"> How many `<input>` elements exist in the form?</p>
+            <p class="question"> What is the first button selected using `document.querySelector(".btn")`?</p>
+            <p class="question"> How many buttons exist in the form?</p>
+            <p class="question"> What element is selected using `document.querySelector("#register-form")`?</p>
+            <p class="question"> How can we select all elements with the class `"gender"`?</p>
+            <p class="question"> What happens if we use `document.querySelectorAll(".gender")`?</p>
+            <p class="question"> What are all buttons selected using `document.querySelectorAll(".btn")`?</p>
+            <p class="question"> How many radio buttons exist on the page?</p>
+            <p class="question"> How many checkboxes are present in the form?</p>
+            <p class="question"> How do we select all `<select>` elements in the document?</p>
+            <p class="question"> What will `document.querySelector("label")` return?</p>
+            <p class="question"> How many labels are there in the form?</p>
+            <p class="question"> What element does `document.querySelector("#contact-email")` select?</p>
+            <p class="question"> What happens if we try `document.getElementById("nonexistent")`?</p>
+            <p class="question"> What does `document.querySelectorAll("input[type='radio']")` return?</p>
+            <p class="question"> What is returned by `document.getElementsByTagName("select")`?</p>
+            <p class="question"> What happens when using `document.querySelectorAll(".input-field")`?</p>
+        </div>
+    </body>
+    <script>
+            // <p class="question"> What element is selected using `document.getElementById("page-title")`?</p>
+            let q1 = document.getElementById("page-title");
+            console.log("Q1: ", q1);
+
+            // <p class="question"> How many elements are selected using `document.getElementsByClassName("name")`?</p>
+            let q2 = document.getElementsByClassName("name");
+            console.log("Q2: ", q2);
+
+            // <p class="question"> What is the first input field selected using `document.querySelector("input")`?</p>
+            let q3 = document.querySelector("input");
+            console.log("Q3: ", q3);
+
+            // <p class="question"> How many `<input>` elements exist in the form?</p>
+            let q4 = document.querySelectorAll("input");
+            console.log("Q4: ", q4.length);
+
+            // <p class="question"> What is the first button selected using `document.querySelector(".btn")`?</p>
+            let q5 = document.querySelector(".btn");
+            console.log("Q5: ", q5);
+
+            // <p class="question"> How many buttons exist in the form?</p>
+            let q6 = document.querySelectorAll("button");
+            console.log("Q6: ", q6.length);
+                
+            // <p class="question"> What element is selected using `document.querySelector("#register-form")`?</p>
+            let q7 = document.querySelector("#register-form");
+            console.log("Q7: ", q7);
+
+            // <p class="question"> How can we select all elements with the class `"gender"`?</p>
+            let q8 = document.querySelectorAll(".gender");
+            console.log("Q8: ", q8.length);
+
+            // <p class="question"> What happens if we use `document.querySelectorAll(".gender")`?</p>
+            let q9 = document.querySelectorAll(".gender");
+            console.log("Q9: It returns a static NodeList containing the 2 radio button elements.", q9);
+
+            // <p class="question"> What are all buttons selected using `document.querySelectorAll(".btn")`?</p>
+            let q10 = document.querySelectorAll(".btn");
+            console.log("Q10: ", q10);
+
+            // <p class="question"> How many radio buttons exist on the page?</p>
+            let q11 = document.querySelectorAll('input[type="radio"]');
+            console.log("Q11: ", q11.length);          
+
+            // <p class="question"> How many checkboxes are present in the form?</p>
+            let q12 = document.querySelectorAll('input[type="checkbox"]');
+            console.log("Q12: ", q12.length);
+
+            // <p class="question"> How do we select all `<select>` elements in the document?</p>
+            let q13 = document.querySelectorAll("select");
+            console.log("Q13: ", q13);
+
+            // <p class="question"> What will `document.querySelector("label")` return?</p>
+            let q14 = document.querySelector("label");
+            console.log("Q14: ", q14); 
+
+            // <p class="question"> How many labels are there in the form?</p>
+            let q15 = document.querySelectorAll("label");
+            console.log("Q15: ", q15.length); 
+
+            // <p class="question"> What element does `document.querySelector("#contact-email")` select?</p>
+            let q16 = document.querySelector("#contact-email");
+            console.log("Q16: ", q16); 
+
+            // <p class="question"> What happens if we try `document.getElementById("nonexistent")`?</p>
+            let q17 = document.getElementById("nonexistent");
+            console.log("Q17: ", q17);
+
+            // <p class="question"> What does `document.querySelectorAll("input[type='radio']")` return?</p>
+            let q18 = document.querySelectorAll("input[type='radio']");
+            console.log("Q18: ", q18); 
+
+            // <p class="question"> What is returned by `document.getElementsByTagName("select")`?</p>
+            let q19 = document.getElementsByTagName("select");
+            console.log("Q19: ", q19);
+
+            // <p class="question"> What happens when using `document.querySelectorAll(".input-field")`?</p>
+            let q20 = document.querySelectorAll(".input-field");
+            console.log("Q20: ", q20); 
+
+    </script>
+</html>
