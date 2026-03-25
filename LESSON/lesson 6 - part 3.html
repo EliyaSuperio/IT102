@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hands-on 3: The Store Inventory Checker (Loops + Logic)</title>
+</head>
+<body>
+  <h3>Warehouse Stock Levels</h3>
+  <div id="inventoryBoard"></div>
+
+</body>
+<script>
+  // Array representing how many of each item are left in the warehouse
+  let stockLevels = [15, 0, 8, 0, 24];
+  let board = document.getElementById("inventoryBoard");
+
+  // Loop through the stock levels and display them on the page
+  for (let i = 0; i < stockLevels.length; i ++) {
+    let itemStatus = document.createElement("p");
+    if (stockLevels[i] > 0) {
+      itemStatus.textContent = `Item ${i + 1}: In Stock (${stockLevels[i]} units)`;
+      itemStatus.style.color = "green";
+    } else {
+      itemStatus.textContent = `Item ${i + 1}: Out of Stock`;
+      itemStatus.style.color = "red";
+    }
+    board.appendChild(itemStatus);
+  }
+</script>
+</html>l

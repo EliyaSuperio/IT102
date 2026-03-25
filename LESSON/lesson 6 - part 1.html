@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hands-on 1: The Age Verifier (if/else Logic)</title>
+</head>
+<body>
+  <h3>Website Access Check</h3>
+  <p>You must be 18 or older to enter.</p>
+
+  <input type="number" id="ageInput" placeholder="Enter your age">
+  <button id="checkAge">Verify Age</button>
+
+  <p id="accessMessage"></p>
+
+</body>
+
+<script>
+  function checkAge() {
+    const age = document.getElementById("ageInput").value;
+    const message = document.getElementById("accessMessage");
+
+    if (age >= 18) {
+      message.textContent = "Access granted. Welcome to the website.";
+      message.style.color = "green";
+    } else {
+      message.textContent = "Access denied. You must be 18 or older.";
+      message.style.color = "red";
+    }
+  }
+
+  document.getElementById("checkAge").addEventListener("click", checkAge);
+</script>
+</html>

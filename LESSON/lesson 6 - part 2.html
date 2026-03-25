@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hands-on 2: The Navigation Menu Builder (Arrays & Loops)</title>
+</head>
+<body>
+  <h3>Website Navigation</h3>
+  <ul id="navMenu"></ul>
+</body>
+<script>
+  // 1. The Array containing our page names
+  let pages = ["Home", "About Us", "Services", "Portfolio", "Contact"];
+  let menuContainer = document.getElementById("navMenu");
+
+  // 2. The Loop that builds the menu
+  for (let i = 0; i < pages.length; i++) {
+    let listItem = document.createElement("li");
+    listItem.textContent = pages[i];
+    menuContainer.appendChild(listItem);
+  }
+
+</script>
+</html>

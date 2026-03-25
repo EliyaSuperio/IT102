@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Level Up | Game Signup</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0f0c29;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            color: white;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            width: 100%;
+            max-width: 400px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        h2 {
+            margin-bottom: 30px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: #00d2ff;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            box-sizing: border-box; /* Fixes padding overflow */
+            transition: 0.3s;
+        }
+
+        input::placeholder {
+            color: #ccc;
+        }
+
+        input:focus {
+            outline: none;
+            background: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 0 8px #00d2ff;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 20px;
+            border: none;
+            border-radius: 8px;
+            background: linear-gradient(to right, #00d2ff, #3a7bd5);
+            color: white;
+            font-weight: bold;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 210, 255, 0.4);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Join the Quest</h2>
+        <form id="myForm">
+            <input type="text" id="firstname" placeholder="First Name">
+            <input type="text" id="lastname" placeholder="Last Name">
+            <input type="text" id="username" placeholder="Username">
+            <input type="email" id="email" placeholder="Email">
+            <input type="password" id="password" placeholder="Password">
+            <input type="password" id="confirm_password" placeholder="Confirm Password">
+            <button type="submit">Create Account</button>
+        </form>
+    </div>
+</body>
+<script>
+  let firstname = document.querySelector("#firstname");
+  let lastname = document.querySelector("#lastname");
+  let username = document.querySelector("#username");
+  let email = document.querySelector("#email");
+  let password = document.querySelector("#password");
+  let confirm_password = document.querySelector("#confirm_password"); 
+  let myForm = document.querySelector("#myForm"); 
+
+  myForm.addEventListener('submit',function(event){
+    event.preventDefault(); // stop reloadss
+    
+    let fname_value = firstname.value; 
+    if(fname_value.trim() === ""){
+      alert("Error: Firstname is Empty!");
+    }
+
+    let lname_value = lastname.value;
+    if(lname_value.trim() === ""){
+      alert("Error: lastname is Empty!");
+    }
+
+    let uname_value = username.value;
+    if(uname_value.trim() === ""){
+      alert("Error: username is Empty!");
+    }else {
+      if (uname_value.length < 5){
+        alert('Error: Username is to short');
+      }
+    }
+    
+    let ename_value = email.value; 
+    if(ename_value.trim() === ""){
+      alert("Error: email is Empty!");
+    }else{
+      let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+      if (!emailPattern.test(ename_value)) {
+        alert("Invalid email format!");
+      }
+    }
+
+    let pname_value = password.value; 
+    if(pname_value.trim() === ""){
+      alert("Error: password is Empty!");
+    }
+
+    let cname_value = confirm_password.value;
+    if(cname_value.trim() === ""){
+      alert("Error: confirm_password is Empty!");
+    }
+    
+  });
+
+</script>
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
